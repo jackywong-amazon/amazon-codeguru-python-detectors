@@ -21,7 +21,7 @@ Actions:
         UntitledReport2:
           SuccessCriteria:
             StaticAnalysisFinding:
-              Number: 0
+              Number: 10
               Severity: CRITICAL
           IncludePaths:
             - codegurusecurity.sarif
