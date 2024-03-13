@@ -21,8 +21,8 @@ Actions:
         UntitledReport2:
           SuccessCriteria:
             StaticAnalysisFinding:
-              Number: 10
-              Severity: CRITICAL
+              Number: 70
+              Severity: HIGH
           IncludePaths:
             - codegurusecurity.sarif
           Format: SARIFSA
