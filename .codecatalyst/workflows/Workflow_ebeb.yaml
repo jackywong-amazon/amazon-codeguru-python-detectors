@@ -11,7 +11,7 @@ Triggers:
 Actions:
   ScanWithAmazonCodeGuruSecurity_2f:
     # Identifies the action. Do not modify this value.
-    Identifier: codecatalyst-labs/scan-with-codeguru-securityy2pzi@v1.0.0
+    Identifier: codecatalyst-labs/scan-with-codeguru-security@v1.0.0
     Outputs:
       Reports:
         UntitledReport:
@@ -19,23 +19,22 @@ Actions:
             - codegurusecurity.sarif
           Format: SARIFSCA
         UntitledReport2:
-          IncludePaths:
-            - codegurusecurity.sarif
-          Format: SARIFSA
           SuccessCriteria:
             StaticAnalysisFinding:
               Number: 0
               Severity: CRITICAL
+          IncludePaths:
+            - codegurusecurity.sarif
+          Format: SARIFSA
       Artifacts:
         - Name: newOutput
           Files:
             - codegurusecurity.sarif
-    # Required; You can use an environment, AWS account connection, and role to access AWS resources.
     Environment:
       Connections:
-        - Role: CodeCatalystWorkflowDevelopmentRole-mymymyInteg
-          Name: "091953878586"
-      Name: Staging
+        - Role: CodeCatalystWorkflowDevelopmentRole-awsjacky
+          Name: "556513939552"
+      Name: dev
     # Specifies the source and/or artifacts to pass to the action as input.
     Inputs:
       # Optional
